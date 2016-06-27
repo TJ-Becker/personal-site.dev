@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Personal Site</title>
+	<title>Projects</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<link href='https://fonts.googleapis.com/css?family=Averia+Libre:400,700italic' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="css/personal-site.css">
+
 </head>
-<body class="home">
+<body class="projects">
 	<nav class="navbar navbar-inverse navbar-fixed-top">
 	  <div class="container-fluid">
 	    <div class="navbar-header">
 	      <a class="navbar-brand" href="index.html">TJ Becker</a>
 	    </div>
 	    <ul class="nav navbar-nav">
-	      <li class="active"><a href="index.html">Home</a></li>
-	      <li><a href="projects.html">Projects</a></li> 
+	      <li><a href="index.html">Home</a></li>
+	      <li class="active"><a href="projects.html">Projects</a></li> 
 	      <li><a href="contact.html">Contact</a></li> 
 	      <li class="dropdown">
 	      	<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
@@ -38,20 +39,27 @@
 
 	  </div>
 	</nav>
-	<section id="middle">
-		<div id="myName" class="main">TJ Becker</div>
-		<div id="job-title" class="main">Software Developer</div>
-		<div class="buttons" id="contact">
-			Contact
+	<div class="row">
+		<div class="col-sm-4 text-center">
+			<div class="projects-info simon">
+				<h1>Simon</h1>
+				<h5>Web application for the simple Simon game.  Created with Javascript and CSS.</h5>
+				<img class="simon-pic img-responsive" src="img/simon-screen.png">
+			</div>
 		</div>
-		<div class="buttons" id="resume">
-			Resume
+		<div class="col-sm-4 text-center">
+			<div class="projects-info calculator">
+				<h1>Calculator</h1>
+				<h5>Calculator built using javascript and CSS.</h5>
+				<img class="calculator-pic img-responsive" src="img/calculator-screen.png">
+			</div>
 		</div>
-	</section>
+	</div>
+	
 	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 	<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 	<script src="https://use.fontawesome.com/fe422cb47d.js"></script>
-	<script src="js/personal-site.js"></script>
+	<script src="js/project.js"></script>
 </body>
 </html>

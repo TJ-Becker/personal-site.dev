@@ -1,0 +1,126 @@
+.home {
+	background-image: url('/img/piano.jpg');
+	background-size: cover;
+}
+
+.projects {
+	background-image: url('/img/stamford-bridge.jpg');
+	background-size: cover;
+}
+.navbar {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+#middle {
+    width: 900px;
+    height: 100px;
+
+    position: absolute;
+    top: -200px;
+    bottom: 0;
+    left: -120px;
+    right: 0;
+
+    margin: auto;
+    opacity: 1;
+    text-shadow: 3px 3px #000000;
+}
+
+.buttons {
+	background-color: transparent;
+	display: inline-block;
+	width: 90px;
+	height: 40px;
+	border: 2px solid white;
+	color: white;
+	text-align: center;
+	line-height: 36px;
+	position: relative;
+	left: 400px;
+	font-family: 'Averia Libre', cursive;
+	font-size: 16px;
+
+}
+.main {
+	position: relative;
+	left: 50px;
+	color: white;
+	text-align: center;
+	font-family: 'Averia Libre', cursive;
+}
+
+#myName {
+	font-size: 90px;
+}
+
+#job-title {
+	font-size: 60px;
+}
+
+.fa-linkedin {
+	color: #0077B5;
+}
+
+.fa-facebook {
+	color: #3B5998;
+}
+
+.fa-github {
+	color: orange;
+}
+
+a:hover i {
+	color: white;
+}
+
+.move-icons {
+	margin: 0px 40px 0px 0px;
+	padding: 0;
+	border: 0;
+}
+
+
+.navbar .navbar-nav > li > a {
+  font-family: 'Averia Libre', cursive;
+  font-size: 18px;
+}
+
+.move-icons > li > a {
+	margin: 0;
+	padding: 7px 20px;
+	border: 0;
+}
+
+.navbar .navbar-header > a.navbar-brand {
+	font-family: 'Averia Libre', cursive;
+}
+
+.projects-info {
+	margin-top: 50px;
+	font-family: 'Averia Libre', cursive;
+	width: 99%;
+	background-color: rgba(14, 21, 70, .5);
+	color: white;
+	text-align: center;
+	display: inline-block;
+	padding: 5px;
+	border: 3px solid black;
+}
+
+div.calculator:hover, div.simon:hover {
+	cursor: pointer;
+}
+
+h1 {
+	margin:0;
+}
+
+iframe {
+	margin-top: 50px;
+}
+
+.iframe-background {
+	background-color: black;
+}

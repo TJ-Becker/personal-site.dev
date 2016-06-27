@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<style>
+		body {
+			background-color: gray;
+		}
+		#forms {
+			margin-top: 5%;
+		}
+		.forms {
+			background-color: #00bfff;
+			height: 3em;
+			width: 24%;
+			border: 0;
+			text-align: center;
+			padding: 0;
+			border: 2px solid black;
+			margin-bottom: 1%;
+			border-radius: 15%;
+			font-size: 18px;
+		}
+		.buttons {
+			background-color: #00bfff;
+			height: 3em;
+			width: 24%;
+			padding: 0;
+			border: 2px solid black;
+			font-size: 18px;
+		}
+		section {
+			background-color: gray;
+			width: 80%;
+			margin-left: 10%;
+		}
+		#answer {
+			background-color: #ff531a;
+		}
+	</style>
+</head>
+<body>
+	<form>
+		<section>
+			<div id="forms">
+				<input class="forms" type="text" id="left" readonly>
+				<input class="forms" type="text" id="middle" readonly>
+				<input class="forms" type="text" id="right" readonly>
+				<input class="forms" type="text" id="answer" readonly hidden>
+			</div>
+			<div>
+				<div>
+					<button type="button" class="buttons number btn btn-default" id="one" data-value="1">1</button>
+					<button type="button" class="buttons number btn btn-default" id="two" data-value="2">2</button>
+					<button type="button" class="buttons number btn btn-default" id="three" data-value="3">3</button>
+					<button type="button" class="buttons operator btn btn-default" data-value="+" id="plus">+</button>
+				</div>
+			</div>
+			<div>
+				<div>
+					<button type="button" class="buttons number btn btn-default" id="four" data-value="4">4</button>
+					<button type="button" class="buttons number btn btn-default" id="five" data-value="5">5</button>
+					<button type="button" class="buttons number btn btn-default" id="six" data-value="6">6</button>
+					<button type="button" class="buttons operator btn btn-default" data-value="-" id="minus">-</button>
+				</div>
+			</div>
+			<div>
+				<div>
+					<button type="button" class="buttons number btn btn-default" id="seven" data-value="7">7</button>
+					<button type="button" class="buttons number btn btn-default" id="eight" data-value="8">8</button>
+					<button type="button" class="buttons number btn btn-default" id="nine" data-value="9">9</button>
+					<button type="button" class="buttons operator btn btn-default" data-value="*" id="multiply">*</button>
+				</div>
+			</div>
+			<div>
+				<div>
+					<button type="button" class="buttons final btn btn-default" data-value="C" id="clear">C</button>
+					<button type="button" class="buttons number btn btn-default" data-value="0" id="clear">0</button>
+					<button type="button" class="buttons final btn btn-default" data-value="=" id="equals">=</button>
+					<button type="button" class="buttons operator btn btn-default" data-value="/" id="divide">/</button>
+				</div>
+			</div>
+			<div>
+				<div>
+					<button type="button" class="buttons number btn btn-default" data-value="." id="decimal">.</button>
+					<button type="button" class="buttons special btn btn-default" data-value="Neg" id="Neg">Neg</button>
+					<button type="button" class="buttons special btn btn-default" data-value="sqrt" id="sqrt">√</button>
+		</section>
+	</form>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
+</script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous">
+</script>
+<script src="js/calculator.js">
+</script>
+</body>
+</html>
