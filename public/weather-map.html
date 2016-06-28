@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Weather Map</title>
+	<style>
+		section div {
+			width: 20%;
+			background-color: rgba(120, 120, 120, .2);
+			text-align: center;
+			float: left;
+			margin-bottom: 2em;
+			margin-right: 2em;
+		}
+		#map {
+			height: 500px;
+			width: 80%;
+			text-align: center;
+			display: inline-block;
+		}
+		form {
+			float: left;
+			margin-bottom: 2em;
+			text-align: center;
+			display: inline-block;
+		}
+		body {
+			background-image: url(img/weather.jpg);
+		}
+		#city {
+			color: white;
+			text-align: center;
+		}
+		.Container {
+			display: flex;
+			justify-content: center;
+			width: 100%;
+			text-align: center;
+			clear: both;
+		}
+	</style>
+</head>
+<body>
+	<h2 id="city"></h2>
+	<section class="Container" id="weather">
+	</section>
+	<div class="Container">
+		<form>
+			<label for="latitude">Latitude:</label>
+			<input type="number" id="latitude" name="latitude">
+			<label for="longitude">Longitude:</label>
+			<input type="number" id="longitude" name="longitude">
+			<label hidden for="days">Days</label>
+			<select id="days" name="days" hidden>
+				<option>1</option>
+				<option>2</option>
+				<option selected>3</option>
+				<option>4</option>
+				<option>5</option>
+				<option>6</option>
+				<option>7</option>
+			</select>
+			<button id="button" type="button">Update Forecast</button>
+		</form>
+	</div>
+	<div class="Container">
+		<div id="map"></div>
+	</div>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFXoxmQ-Ezly_Wy_pv8SvrbvoGO-xbtJc"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script type="text/javascript">
+		var latitude = 29.426791;
+		var longitude = -98.489602;
+		var days = 3;
+		(function() {
+			"use strict";
+			var mapOptions = {
+				zoom: 10,
+				center: {
+					lat:  29.426791,
+					lng: -98.489602
+				}
+			};
+			var coordinates = {lat: latitude, lng: longitude};
+			var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+			var marker = new google.maps.Marker({
+				position: coordinates,
+				map: map,
+				draggable:true
+				});
+
+			function drag() {
+				latitude = marker.getPosition().lat();
+				longitude = marker.getPosition().lng();
+				days = Number($('#days').val());
+				coordinates = {lat: latitude, lng: longitude};
+				map.setCenter(coordinates);
+				callAjax();
+			}
+			function updateForecast() {
+				marker.setMap(null);
+				latitude = Number($('#latitude').val());
+				longitude = Number($('#longitude').val());
+				days = Number($('#days').val());
+				coordinates = {lat: latitude, lng: longitude};
+				map.setCenter(coordinates);
+				marker = new google.maps.Marker({
+				position: coordinates,
+				map: map,
+				draggable:true
+				});
+				marker.addListener('dragend', drag);
+				callAjax();
+			}
+
+			$('#button').click(function() {
+				updateForecast();
+			});
+			marker.addListener('dragend', drag);
+		})();
+		
+		function callAjax() {
+		$.ajax({
+			url: "http://api.openweathermap.org/data/2.5/forecast/daily",
+			data: {
+				APPID: "2c985d3b004ca453f81845f99734cb6e",
+				units: "imperial",
+				lat: latitude,
+				lon: longitude,
+				cnt: days
+			}
+			}).done(findWeather);
+		};
+
+		callAjax();
+		
+		function findWeather(data) {
+			var weatherHtml = "";
+			var cityHtml = data.city.name + ", " + data.city.country;
+			console.log(data);
+			for (i = 0; i < data.list.length; i++) {
+				var weather = data.list[i];
+				var date = new Date(weather.dt*1000);
+				weatherHtml +="<div><h3>" + date + "</h3>";
+				weatherHtml += "<h4>High " + Math.round(weather.temp.max) + "/" + Math.round(weather.temp.min) + " Low" + "</h4>";
+				weatherHtml += "<img src='http://openweathermap.org/img/w/" + weather.weather[0].icon + ".png'>";
+				weatherHtml += "<h4>" + weather.weather[0].description + "</h4>";
+				weatherHtml += "<h4>Humidity: " + weather.humidity + "</h4>";
+				weatherHtml += "<h4>Wind: " + weather.speed + "</h4>";
+				weatherHtml += "<h4>Pressure: " + weather.pressure + "</h4></div>";
+			};
+			$('#weather').html(weatherHtml);
+			$('#city').html(cityHtml);
+		};
+	</script>
+</body>
+</html>

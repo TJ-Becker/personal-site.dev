@@ -7,6 +7,11 @@
 	background-image: url('/img/stamford-bridge.jpg');
 	background-size: cover;
 }
+
+.contact {
+	background-image: url('/img/russ.jpg');
+	background-size: cover;
+}
 .navbar {
 	border: 0;
 	margin: 0;
@@ -101,7 +106,7 @@ a:hover i {
 	margin-top: 50px;
 	font-family: 'Averia Libre', cursive;
 	width: 99%;
-	background-color: rgba(14, 21, 70, .5);
+	background-color: rgba(14, 21, 70, .8);
 	color: white;
 	text-align: center;
 	display: inline-block;
@@ -109,7 +114,7 @@ a:hover i {
 	border: 3px solid black;
 }
 
-div.calculator:hover, div.simon:hover {
+div.calculator:hover, div.simon:hover, div.weather-map:hover, div.buttons {
 	cursor: pointer;
 }
 
@@ -123,4 +128,8 @@ iframe {
 
 .iframe-background {
 	background-color: black;
+}
+
+.contact-form {
+	width: 20%;
 }
