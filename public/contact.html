@@ -8,7 +8,10 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
 	<link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="/css/main.css">
 	<link rel="stylesheet" href="css/personal-site.css">
+	
+
 </head>
 <body>
 	<nav class="navbar navbar-inverse navbar-fixed-top">
@@ -42,26 +45,38 @@
 	</nav>
 	<div class="row">
 		<div class="col-sm-4 text-center">
-			<div class="projects-info simon">
+			<div class="tj-links">
 				<a href="https://www.linkedin.com/in/tj-becker" target="_blank"><i class="fa fa-linkedin fa-5x" aria-hidden="true"></i></a>
 			</div>
 		</div>
 		<div class="col-sm-4 text-center">
-			<div class="projects-info calculator">
+			<div class="tj-links">
 				<a href="https://github.com/TJ-Becker" target="_blank"><i class="fa fa-github fa-5x" aria-hidden="true"></i></a>
 			</div>
 		</div>
 		<div class="col-sm-4 text-center">
-			<div class="projects-info weather-map">
+			<div class="tj-links">
 				<a href="https://www.facebook.com/tj.becker.9" target="_blank"><i class="fa fa-facebook fa-5x" aria-hidden="true"></i></a>
 			</div>
 		</div>
 	</div>
-	<div>
-		If you are interested in learning more about me, want to see first hand some of what I have developed, or even just want to chat, you are welcome to visit any of my sites shown above.  Alternatively, if it is more convenient, feel free to use the form below and I will respond as quickly as possible.
+	<div class="container">
+		<div class="container-fluid">
+			<div class="row message">
+				<div class="col-sm-12">
+				Feel free to visit any of my sites shown above to learn more about me.  My email is linked below as well.  Alternatively, if it is more convenient, you can use the form below and I will respond as quickly as possible.
+				</div>
+			</div>
+			<div class="col-sm-12 text-center">
+				<div class="email-link">
+					<a href="mailto:tj.becker@mail.com" target="_blank"><i class="fa fa-envelope fa-5x" aria-hidden="true"></i></a>
+				</div>
+			</div>
+		</div>
 	</div>
 	<div class="container">
-			<div class="row main">
+	<div class="container-fluid">
+			<div class="row">
 				<div class="panel-heading">
 	               <div class="panel-title text-center">
 	               		<h1 class="title">Contact Me</h1>
@@ -70,10 +85,10 @@
 	            </div> 
 				<div class="main-login main-center">
 					<form class="form-horizontal" method="post" action="#">
-						
+
 						<div class="form-group">
 							<label for="from" class="cols-sm-2 control-label">From</label>
-							<div class="cols-sm-10">
+							<div class="cols-sm-6">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
 									<input type="text" class="form-control" name="name" id="from"  placeholder="Your name"/>
@@ -83,7 +98,7 @@
 
 						<div class="form-group">
 							<label for="subject" class="cols-sm-2 control-label">Subject</label>
-							<div class="cols-sm-10">
+							<div class="cols-sm-6">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-hashtag" aria-hidden="true"></i></span>
 									<input type="text" class="form-control" name="subject" id="subject"  placeholder="Subject"/>
@@ -93,7 +108,7 @@
 
 						<div class="form-group">
 							<label for="message" class="cols-sm-2 control-label">Message</label>
-							<div class="cols-sm-10">
+							<div class="cols-sm-6">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-envelope" aria-hidden="true"></i></span>
 									<textarea class="form-control" name="email" id="message"  placeholder="Message"></textarea>
@@ -101,12 +116,13 @@
 							</div>
 						</div>
 
-						<div class="form-group ">
+						<div class="form-group">
 							<button type="button" class="btn btn-primary btn-lg btn-block login-button">Send</button>
 						</div>
 						
 					</form>
 				</div>
+			</div>
 			</div>
 		</div>
 	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>

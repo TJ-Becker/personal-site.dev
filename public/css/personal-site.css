@@ -1,15 +1,16 @@
 .home {
-	background-image: url('/img/piano.jpg');
-	background-size: cover;
+	background: url('/img/piano.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
-
 .projects {
-	background-image: url('/img/stamford-bridge.jpg');
-	background-size: cover;
+	background: url('/img/gray.png');
 }
 
 .contact {
-	background-image: url('/img/russ.jpg');
+	background-image: url('/img/gray.png');
 	background-size: cover;
 }
 .navbar {
@@ -77,7 +78,7 @@
 }
 
 a:hover i {
-	color: white;
+	color: gray;
 }
 
 .move-icons {
@@ -103,15 +104,15 @@ a:hover i {
 }
 
 .projects-info {
-	margin-top: 50px;
+	margin-top: 80px;
 	font-family: 'Averia Libre', cursive;
 	width: 99%;
-	background-color: rgba(14, 21, 70, .8);
-	color: white;
+	background-color: rgba(255, 255, 255, .8);
 	text-align: center;
+	color: black;
 	display: inline-block;
 	padding: 5px;
-	border: 3px solid black;
+	border: 7px solid black;
 }
 
 div.calculator:hover, div.simon:hover, div.weather-map:hover, div.buttons {
@@ -130,6 +131,34 @@ iframe {
 	background-color: black;
 }
 
-.contact-form {
-	width: 20%;
+.tj-links {
+	margin-top: 80px;
+	font-family: 'Averia Libre', cursive;
+	width: 50%;
+	text-align: center;
+	color: black;
+	display: inline-block;
+	padding: 5px;
+	text-shadow: 2px 2px black;
+}
+
+.message {
+	text-align: center;
+	margin-top: 50px;
+	font-family: 'Averia Libre', cursive;
+	font-size: 30px;
+	color: black;
+	font-weight: bold;
+
+}
+
+.email-link {
+	margin-top: 20px;
+	margin-bottom:10px;
+	font-family: 'Averia Libre', cursive;
+	width: 50%;
+	text-align: center;
+	color: black;
+	display: inline-block;
+	padding: 5px;
 }
